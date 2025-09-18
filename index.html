@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Tốt Nghiệp!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .floating-emoji {
+            position: absolute;
+            font-size: 3rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .emoji-1 { top: 10%; left: 10%; animation-delay: 0s; }
+        .emoji-2 { top: 20%; right: 10%; animation-delay: 1s; }
+        .emoji-3 { bottom: 20%; left: 10%; animation-delay: 2s; }
+        .emoji-4 { bottom: 10%; right: 10%; animation-delay: 0.5s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .main-title {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #fff, #e0e7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 2rem 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .placeholder-emoji {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .controls {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .control-btn {
+            background: rgba(0,0,0,0.6);
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+
+        .control-btn:hover {
+            background: rgba(0,0,0,0.8);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 800px;
+            width: 100%;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .card-emoji {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-text {
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        .final-message {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 2rem;
+            background: linear-gradient(45deg, #fff, #e0e7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .final-message {
+                font-size: 1.5rem;
+            }
+            
+            .floating-emoji {
+                font-size: 2rem;
+            }
+            
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Floating emojis -->
+        <div class="floating-emoji emoji-1">🎓</div>
+        <div class="floating-emoji emoji-2">✨</div>
+        <div class="floating-emoji emoji-3">🎉</div>
+        <div class="floating-emoji emoji-4">🌟</div>
+
+        <!-- Header -->
+        <div class="header">
+            <h1 class="main-title">Chúc Mừng Tốt Nghiệp!</h1>
+            <p class="subtitle">
+                Hôm nay đánh dấu khởi đầu của hành trình tuyệt vời. Bạn đã học tập chăm chỉ, 
+                và giờ là lúc để ăn mừng thành tựu tuyệt vời này! 🎓✨
+            </p>
+        </div>
+
+        <!-- Video Section -->
+        <div class="video-container">
+            <div class="video-wrapper">
+                <video id="graduationVideo" loop muted autoplay playsinline preload="metadata">
+                    <source src="graduation-video.mp4" type="video/mp4">
+                    <source src="graduation-video.webm" type="video/webm">
+                    <!-- Fallback content -->
+                    <div class="video-placeholder">
+                        <div class="placeholder-emoji">🎓</div>
+                        <h2>Ngày Tốt Nghiệp!</h2>
+                        <p>Video kỷ niệm của bạn sẽ phát ở đây</p>
+                        <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 1rem;">
+                            Thêm file video của bạn với tên "graduation-video.mp4"
+                        </p>
+                    </div>
+                </video>
+                
+                <div class="controls">
+                    <button class="control-btn" id="playPauseBtn" onclick="togglePlay()">
+                        <span id="playIcon">⏸️</span>
+                    </button>
+                    <button class="control-btn" id="muteBtn" onclick="toggleMute()">
+                        <span id="muteIcon">🔇</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="cards">
+            <div class="card">
+                <div class="card-emoji">🌟</div>
+                <h3 class="card-title">Bạn Đã Làm Được!</h3>
+                <p class="card-text">
+                    Tất cả những đêm thức khuya và công sức đã được đền đáp. 
+                    Bạn nên tự hào về bản thân!
+                </p>
+            </div>
+            
+            <div class="card">
+                <div class="card-emoji">🚀</div>
+                <h3 class="card-title">Cuộc Phiêu Lưu Mới</h3>
+                <p class="card-text">
+                    Thế giới đầy cơ hội đang chờ đợi một người như bạn.
+                </p>
+            </div>
+            
+            <div class="card">
+                <div class="card-emoji">💫</div>
+                <h3 class="card-title">Tương Lai Tươi Sáng</h3>
+                <p class="card-text">
+                    Đây chỉ là khởi đầu của tất cả những điều tuyệt vời bạn sẽ đạt được.
+                </p>
+            </div>
+        </div>
+
+        <div class="final-message">
+            Chúc mừng thành công của bạn! 🥳🎊
+        </div>
+    </div>
+
+    <script>
+        const video = document.getElementById('graduationVideo');
+        const playIcon = document.getElementById('playIcon');
+        const muteIcon = document.getElementById('muteIcon');
+        
+        let isPlaying = true;
+        let isMuted = true;
+
+        function togglePlay() {
+            if (video.paused) {
+                video.play();
+                playIcon.textContent = '⏸️';
+                isPlaying = true;
+            } else {
+                video.pause();
+                playIcon.textContent = '▶️';
+                isPlaying = false;
+            }
+        }
+
+        function toggleMute() {
+            video.muted = !video.muted;
+            isMuted = video.muted;
+            muteIcon.textContent = isMuted ? '🔇' : '🔊';
+        }
+
+        // Auto-play handling
+        video.addEventListener('loadstart', function() {
+            video.muted = true;
+            video.play().catch(function() {
+                playIcon.textContent = '▶️';
+                isPlaying = false;
+            });
+        });
+    </script>
+</body>
+</html>
