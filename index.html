@@ -219,7 +219,7 @@
         <div class="header">
             <h1 class="main-title">Chúc Mừng Anh Chị Tốt Nghiệp!</h1>
             <p class="subtitle">
-                Hôm nay đánh dấu khởi đầu của hành trình tuyệt vời. Bạn đã học tập chăm chỉ, 
+                Hôm nay đánh dấu khởi đầu của hành trình tuyệt vời. Anh chị đã học tập chăm chỉ, 
                 và giờ là lúc để ăn mừng thành tựu tuyệt vời này! 🎓✨
             </p>
         </div>
@@ -228,14 +228,14 @@
         <div class="video-container">
             <div class="video-wrapper">
                 <video id="graduationVideo" loop muted autoplay playsinline preload="metadata">
-                    <source src="video.mp4" type="video/mp4">
+                    <source src="video_test.mp4" type="video/mp4">
                     <!-- Fallback content -->
                     <div class="video-placeholder">
                         <div class="placeholder-emoji">🎓</div>
                         <h2>Ngày Tốt Nghiệp!</h2>
-                        <p>Video kỷ niệm của bạn sẽ phát ở đây</p>
+                        <p>Video kỷ niệm của anh chị sẽ phát ở đây</p>
                         <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 1rem;">
-                            Thêm file video của bạn với tên "graduation-video.mp4"
+                            Thêm file video của anh chị với tên "graduation-video.mp4"
                         </p>
                     </div>
                 </video>
@@ -255,10 +255,10 @@
         <div class="cards">
             <div class="card">
                 <div class="card-emoji">🌟</div>
-                <h3 class="card-title">Anh chị Đã Làm Được!</h3>
+                <h3 class="card-title">Anh Chị Đã Làm Được!</h3>
                 <p class="card-text">
                     Tất cả những đêm thức khuya và công sức đã được đền đáp. 
-                    Bạn nên tự hào về bản thân!
+                    Anh chị nên tự hào về bản thân!
                 </p>
             </div>
             
@@ -266,7 +266,7 @@
                 <div class="card-emoji">🚀</div>
                 <h3 class="card-title">Cuộc Phiêu Lưu Mới</h3>
                 <p class="card-text">
-                    Thế giới đầy cơ hội đang chờ đợi một người như bạn.
+                    Thế giới đầy cơ hội đang chờ đợi một người như anh chị.
                 </p>
             </div>
             
@@ -274,7 +274,7 @@
                 <div class="card-emoji">💫</div>
                 <h3 class="card-title">Tương Lai Tươi Sáng</h3>
                 <p class="card-text">
-                    Đây chỉ là khởi đầu của tất cả những điều tuyệt vời bạn sẽ đạt được.
+                    Đây chỉ là khởi đầu của tất cả những điều tuyệt vời anh chị sẽ đạt được.
                 </p>
             </div>
         </div>
@@ -290,7 +290,7 @@
         const muteIcon = document.getElementById('muteIcon');
         
         let isPlaying = true;
-        let isMuted = true;
+        let isMuted = false;
 
         function togglePlay() {
             if (video.paused) {
@@ -312,7 +312,7 @@
 
         // Auto-play handling
         video.addEventListener('loadstart', function() {
-            video.muted = true;
+            // video.muted = true;
             video.play().catch(function() {
                 playIcon.textContent = '▶️';
                 isPlaying = false;
